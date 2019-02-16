@@ -6,6 +6,8 @@ import { ActivatedRoute } from '@angular/router';
 import {ProduitService} from './produit.service';
 import {Produit} from '../shared/produit';
 
+
+ 
 @Component({
   selector: 'app-produit',
   templateUrl: './produit.component.html',
@@ -72,7 +74,7 @@ export class ProduitComponent implements OnInit{
     this.createForm();
   }
   deleteProduit(){
-    this.produitService.deleteProduit(this.selectedProduit.ref).subscribe(
+    this.produitService.deleteProduit(this.selectedProduit.id).subscribe(
       res => {
         this.selectedProduit = new Produit();
         this.loadProduits();
