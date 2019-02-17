@@ -11,9 +11,11 @@ export class AppService {
   constructor() { }
 
   authenticate(credentials, callback){
-    if(credentials && credentials.username='user' && credentials.password='password'){
+    if(credentials && credentials.username=='user' && credentials.password=='password'){
       this.authenticated = true;
-    } else{
+    }
+    else
+    {
       this.authenticated = false;
     }
 
